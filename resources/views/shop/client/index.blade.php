@@ -2,7 +2,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js']) 
 @endif
 
-@include('layouts.navbar')
+@include('layouts.navigation')
 
 
 <div class="flex justify-center items-center min-h-screen bg-gray-100">
@@ -19,8 +19,9 @@
             <tr class="hover:bg-gray-100 transition-colors">
               <td class="px-6 py-4"><a href="{{ route('clients.show', $client['id']) }}">{{$client['name']}}</a></td>
               <td class="px-6 py-4">
-                <button class="text-blue-500 hover:text-blue-700">Editar</button>
-                <button class="text-red-500 hover:text-red-700 ml-4">Eliminar</button>
+                <a href="{{ route('clients.edit', $client['id']) }}" class="text-blue-500 hover:text-blue-700">Editar</a>
+                <a href="{{ route('clients.delete', $client['id']) }}" class="text-red-500 hover:text-blue-700">Eliminar</a>
+                {{-- <button class="text-red-500 hover:text-red-700 ml-4">Eliminar</button> --}}
               </td>
             </tr>
           @endforeach
@@ -29,6 +30,9 @@
     </div>
   </div>
   
+  <div class="mt-4 flex justify-center">
+    <a href="{{ route('clients.add') }}" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Añadir cliente</a>
+  </div>
   
 
 

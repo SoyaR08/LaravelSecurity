@@ -22,5 +22,8 @@ Route::get('/clients', [ClientController::class, 'index'])->name('clients');
 Route::get('/clients/add', [ClientController::class, 'create'])->name('clients.add');
 Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
 Route::get('/clients/{client}', [ClientController::class, 'show'])->name('clients.show');
-
+Route::get('/clients/edit/{client}', [ClientController::class, 'edit'])->name('clients.edit');
+Route::get('/clients/delete/{client}', [ClientController::class, 'delete'])->name('clients.delete');
+Route::patch('/clients/{client}', [ClientController::class, 'update'])->name('clients.update');
+Route::delete('/clients/{client}', [ClientController::class, 'destroy'])->name('clients.destroy');
 require __DIR__.'/auth.php';

@@ -1,34 +1,29 @@
-@if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot'))) 
-    @vite(['resources/css/app.css', 'resources/js/app.js']) 
-@endif
 
-@include('layouts.navigation')
-
-<h1>Añadir cliente</h1>
-
-<form method="post" action="{{ route("clients.store") }}">
-    @csrf
-    <div>
-        <label for="name">Nombre: </label>
-        <input type="text" name="name" id="name">
-    </div>
+@component('layouts.app')
     
-    <div>
-        <label for="surname">Apellido: </label>
-        <input type="text" name="surname" id="surname">
-    </div>
-    
-    <div>
-        <label for="phone">Teléfono: </label>
-        <input type="text" name="phone" id="phone">
-    </div>
-    
-    <div>
-        <label for="email">Email: </label>
-        <input type="email" name="email" id="email">
-    </div>
-    <button type="submit">Enviar</button>
 
-</form>
+<div>
+    <div class="flex flex-col items-center justify-center h-screen">
+        <div class="w-full max-w-md rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-white mb-4">Añadir cliente</h2>
+            <form method="post" action="{{ route("clients.store") }}">
+                @csrf
+                @include('shop.client.formfields')
+                <br>
+                <button type="submit" class="bg-gray-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                    Añadir
+                </button>
+                <a href="{{ route('clients') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Volver Atrás
+                </a>
+            
+            </form>
 
-<a href="{{ route('clients') }}">Volver Atrás</a>
+        </div>
+    </div>
+</div>
+@endcomponent
+
+
+
+

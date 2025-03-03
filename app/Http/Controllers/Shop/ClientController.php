@@ -23,7 +23,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('shop.client.addclient');
+        return view('shop.client.addclient', ['client' => new Client()]);
     }
 
     /**

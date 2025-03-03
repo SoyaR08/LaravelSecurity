@@ -1,5 +1,5 @@
 <div>
-    <label for="name" class="block text-gray-800 font-semibold text-sm"
+    <label for="name" class="block text-white font-semibold text-sm"
       >Nombre: </label
     >
     <div class="mt-2">
@@ -15,7 +15,7 @@
 </div>
 
 <div>
-    <label for="surname" class="block text-gray-800 font-semibold text-sm"
+    <label for="surname" class="block text-white font-semibold text-sm"
       >Apellido: </label
     >
     <div class="mt-2">
@@ -32,7 +32,7 @@
 
 
 <div>
-    <label for="surname" class="block text-gray-800 font-semibold text-sm"
+    <label for="surname" class="block text-white font-semibold text-sm"
       >Teléfono: </label
     >
     <div class="mt-2">
@@ -48,7 +48,7 @@
 </div>      
 
 <div>
-    <label for="surname" class="block text-gray-800 font-semibold text-sm"
+    <label for="surname" class="block text-white font-semibold text-sm"
       >Correo Electrónico: </label
     >
     <div class="mt-2">

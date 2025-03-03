@@ -1,0 +1,21 @@
+.grid-parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px;
+    gap: 6px;
+    margin: 20px;
+}
+
+.card1, .card2, .card3 {
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+}
+
+.card1:hover, .card2:hover, .card3:hover {
+    transform: scale(1.05); 
+}
+
+.indexTitle {
+    color: white;
+    font-size: 26px;
+    margin: 4px;
+}
